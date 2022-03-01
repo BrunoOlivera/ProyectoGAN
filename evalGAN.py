@@ -87,8 +87,8 @@ def eval(num_mh_samples):
     # for i in range(0, test_data.shape[0], step):
     #     X[i, :, :] = test_data.values[i:i + window, :]
 
-    G = G_R_H_24_24_6000_2e_06_False_5
     D = D_R_H_24_24_6000_2e_06_False_5
+    G = G_R_H_24_24_6000_2e_06_False_5
 
     z_i = torch.randn(X.shape[0], K, 1)
     X_fake = G(z_i).reshape(-1, K, F)
